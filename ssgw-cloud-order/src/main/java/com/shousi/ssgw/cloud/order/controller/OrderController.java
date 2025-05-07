@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class OrderController {
 
     @Autowired
-    private OrderService orderService ;
+    private OrderService orderService;
 
     @GetMapping(value = "/findOrderByOrderId/{orderId}")
     public Order findOrderByOrderId(@PathVariable("orderId") Long orderId) {
-        return orderService.findOrderByOrderId(orderId) ;
+        return orderService.findOrderByOrderId(orderId);
     }
 
 }
