@@ -10,9 +10,15 @@ spring:
     username: root
     password: 123456
   cloud:
+    # 配置nacos注册中心的地址
     nacos:
       discovery:
         server-addr: localhost:8848
+        cluster-name: SH # 配置服务所属集群名称
+    # 集成nacos的负载均衡算法，默认：随机
+    loadbalancer:
+      nacos:
+        enabled: true
   application:
     name: ssgw-cloud-order
 # 配置mybatis的相关信息
