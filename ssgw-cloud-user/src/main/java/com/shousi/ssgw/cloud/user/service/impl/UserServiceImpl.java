@@ -14,6 +14,11 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User findUserByUserId(Long userId) {
+        try {
+            Thread.sleep(60000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         return userMapper.findUserByUserId(userId);
     }
 }

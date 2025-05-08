@@ -16,9 +16,19 @@ spring:
         server-addr: localhost:8848
         cluster-name: SH # 配置服务所属集群名称
     # 集成nacos的负载均衡算法，默认：随机
-    loadbalancer:
-      nacos:
-        enabled: true
+#    loadbalancer:
+#      nacos:
+#        enabled: true
+    # openfeign日志级别配置
+    openfeign:
+      client:
+        config:
+#          ssgw-cloud-user: 针对于某个服务的配置
+          default: # 针对于所有服务
+            logger-level: full
+            connect-timeout: 5000
+            read-timeout: 2000
+            retryer: com.shousi.ssgw.cloud.order.retryer.FeignClientRetryer
   application:
     name: ssgw-cloud-order
 # 配置mybatis的相关信息
@@ -27,3 +37,6 @@ mybatis:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   type-aliases-package: com.shousi.ssgw.cloud.order.entity
   mapper-locations: classpath:/mapper/*.xml
+logging:
+  level:
+    com.shousi.ssgw.cloud.order.feign: debug
