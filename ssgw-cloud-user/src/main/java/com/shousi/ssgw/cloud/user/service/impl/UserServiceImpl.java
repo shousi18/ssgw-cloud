@@ -1,6 +1,6 @@
 package com.shousi.ssgw.cloud.user.service.impl;
 
-import com.shousi.ssgw.cloud.user.entity.User;
+import com.shousi.ssgw.cloud.entity.User;
 import com.shousi.ssgw.cloud.user.mapper.UserMapper;
 import com.shousi.ssgw.cloud.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,11 +14,11 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User findUserByUserId(Long userId) {
-        try {
-            Thread.sleep(60000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+//        try {
+//            Thread.sleep(60000);
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
         return userMapper.findUserByUserId(userId);
     }
 }

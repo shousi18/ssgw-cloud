@@ -1,4 +1,4 @@
-package com.shousi.ssgw.cloud.order.retryer;
+package com.shousi.ssgw.cloud.feign;
 
 import feign.RetryableException;
 import feign.Retryer;

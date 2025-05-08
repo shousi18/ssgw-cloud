@@ -1,6 +1,6 @@
 package com.shousi.ssgw.cloud.order.controller;
 
-import com.shousi.ssgw.cloud.order.entity.Order;
+import com.shousi.ssgw.cloud.entity.Order;
 import com.shousi.ssgw.cloud.order.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,6 +1,6 @@
-package com.shousi.ssgw.cloud.order.feign.client;
+package com.shousi.ssgw.cloud.feign;
 
-import com.shousi.ssgw.cloud.order.entity.User;
+import com.shousi.ssgw.cloud.entity.User;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

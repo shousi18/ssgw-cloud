@@ -3,7 +3,9 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ssgw-cloud-model/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ssgw-cloud-order/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ssgw-cloud-user/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ssgw-feign-api/src/main/java" charset="UTF-8" />
   </component>
 </project>

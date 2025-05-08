@@ -11,6 +11,8 @@
     <modules>
         <module>ssgw-cloud-user</module>
         <module>ssgw-cloud-order</module>
+        <module>ssgw-cloud-model</module>
+        <module>ssgw-feign-api</module>
     </modules>
 
     <!-- 定义属性 -->

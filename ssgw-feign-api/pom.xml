@@ -9,7 +9,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>ssgw-cloud-user</artifactId>
+    <artifactId>ssgw-feign-api</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -19,35 +19,19 @@
 
     <dependencies>
 
-        <!-- spring boot的web开发所需要的起步依赖 -->
+        <!-- spring cloud 所提供的负载均衡器 -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-loadbalancer</artifactId>
         </dependency>
 
-        <!-- mysql的驱动 -->
+        <!-- 加入fegin的依赖 -->
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
 
-        <!-- mybatis和spring boot整合的起步依赖 -->
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-        </dependency>
-
-        <!-- lombok依赖，快速生成getter和setter方法 -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        </dependency>
-
+        <!-- 实体类所对应的依赖 -->
         <dependency>
             <groupId>com.shousi</groupId>
             <artifactId>ssgw-cloud-model</artifactId>
@@ -55,5 +39,4 @@
         </dependency>
 
     </dependencies>
-
 </project>

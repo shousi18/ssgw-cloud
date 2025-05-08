@@ -1,6 +1,6 @@
 package com.shousi.ssgw.cloud.user.service;
 
-import com.shousi.ssgw.cloud.user.entity.User;
+import com.shousi.ssgw.cloud.entity.User;
 
 public interface UserService {
 

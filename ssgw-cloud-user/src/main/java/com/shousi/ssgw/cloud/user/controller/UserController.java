@@ -1,6 +1,6 @@
 package com.shousi.ssgw.cloud.user.controller;
 
-import com.shousi.ssgw.cloud.user.entity.User;
+import com.shousi.ssgw.cloud.entity.User;
 import com.shousi.ssgw.cloud.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

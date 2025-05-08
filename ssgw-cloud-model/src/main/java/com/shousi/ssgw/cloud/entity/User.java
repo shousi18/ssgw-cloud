@@ -1,4 +1,4 @@
-package com.shousi.ssgw.cloud.order.entity;
+package com.shousi.ssgw.cloud.entity;
 
 import lombok.Data;
 

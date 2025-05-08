@@ -1,6 +1,6 @@
 package com.shousi.ssgw.cloud.user.mapper;
 
-import com.shousi.ssgw.cloud.user.entity.User;
+import com.shousi.ssgw.cloud.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

@@ -1,6 +1,6 @@
 package com.shousi.ssgw.cloud.order.mapper;
 
-import com.shousi.ssgw.cloud.order.entity.Order;
+import com.shousi.ssgw.cloud.entity.Order;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper  // 该注解可以通过在启动类上的@MapperScan注解进行替换

@@ -1,7 +1,7 @@
 package com.shousi.ssgw.cloud.order.service;
 
 
-import com.shousi.ssgw.cloud.order.entity.Order;
+import com.shousi.ssgw.cloud.entity.Order;
 
 public interface OrderService {
 
