@@ -2,6 +2,7 @@ package com.shousi.ssgw.cloud.order.service.impl;
 
 import com.shousi.ssgw.cloud.order.entity.Order;
 import com.shousi.ssgw.cloud.order.entity.User;
+import com.shousi.ssgw.cloud.order.feign.client.UserFeignClient;
 import com.shousi.ssgw.cloud.order.mapper.OrderMapper;
 import com.shousi.ssgw.cloud.order.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,8 +15,11 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     private OrderMapper orderMapper;
 
+//    @Autowired
+//    private RestTemplate restTemplate;
+
     @Autowired
-    private RestTemplate restTemplate;
+    private UserFeignClient userFeignClient;
 
     /**
      * 查询订单（携带用户信息）
@@ -30,9 +34,13 @@ public class OrderServiceImpl implements OrderService {
 //                "http://localhost:10100/api/user/findUserByUserId/" + order.getUserId(),
 //                User.class);
 
-        User user = restTemplate.getForObject(
-                "http://ssgw-cloud-user/api/user/findUserByUserId/" + order.getUserId(),
-                User.class);
+//        User user = restTemplate.getForObject(
+//                "http://ssgw-cloud-user/api/user/findUserByUserId/" + order.getUserId(),
+//                User.class);
+
+        // 动态代理实现远程调用
+        User user = userFeignClient.findUserByUserId(order.getUserId());
+
         order.setUser(user);
         return order;
     }
