@@ -1,0 +1,28 @@
+server:
+  port: 8222
+spring:
+  application:
+    name: ssgw-cloud-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true # 表示启用网关服务注册和发现
+      routes:
+        - id: ssgw-cloud-user # 路由id，没有固定规则，但是不能重复
+          uri: lb://ssgw-cloud-user # 路由的转发地址，这里的lb://前缀表示从注册中心获取服务实例，lb后面的是服务名
+          predicates:
+            - Path=/*/user/** # 路由断言，即请求路径匹配/user/**时才进行转发
+          # 路由过滤器
+          filters:
+            - AddRequestParameter=name,shousi
+        - id: ssgw-cloud-order
+          uri: lb://ssgw-cloud-order
+          predicates:
+            - Path=/*/order/**
+      # 默认过滤器，即所有路由的过滤器
+      default-filters:
+        - AddRequestHeader=nihao,shousi
+    nacos:
+      discovery:
+        server-addr: localhost:8848

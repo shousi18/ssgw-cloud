@@ -13,6 +13,7 @@
         <module>ssgw-cloud-order</module>
         <module>ssgw-cloud-model</module>
         <module>ssgw-feign-api</module>
+        <module>ssgw-cloud-gateway</module>
     </modules>
 
     <!-- 定义属性 -->
