@@ -16,6 +16,10 @@ spring:
       config:
         server-addr: localhost:8848
         namespace: dev
+    sentinel:
+      transport:
+        dashboard: localhost:8080 # 配置sentinel控制台地址
+      web-context-unify: false # 配置是否使用统一web上下文
   config:
     import:
       - nacos:ssgw-cloud-user-dev.yml

@@ -1,6 +1,7 @@
 package com.shousi.ssgw.cloud.feign;
 
 import com.shousi.ssgw.cloud.entity.User;
+import com.shousi.ssgw.cloud.feign.fallback.UserFeignClientFallback;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -8,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 /**
  * Order 微服务 -> 远程调用(feign接口) -> User 微服务
  */
-@FeignClient(value = "ssgw-cloud-user")
+@FeignClient(value = "ssgw-cloud-user", fallback = UserFeignClientFallback.class)
 public interface UserFeignClient {
 
     /**

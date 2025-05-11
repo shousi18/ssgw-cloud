@@ -15,6 +15,18 @@ spring:
       discovery:
         server-addr: localhost:8848
         cluster-name: SH # 配置服务所属集群名称
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+      datasource:
+        ds1:
+          nacos:
+            server-addr: localhost:8848
+            data-id: sentinel-rules
+            namespace: dev
+            group-id: DEFAULT_GROUP
+            data-type: json
+            rule-type: flow
     # 集成nacos的负载均衡算法，默认：随机
 #    loadbalancer:
 #      nacos:
@@ -40,3 +52,7 @@ mybatis:
 logging:
   level:
     com.shousi.ssgw.cloud.feign: debug
+
+feign:
+  sentinel:
+    enabled: true
