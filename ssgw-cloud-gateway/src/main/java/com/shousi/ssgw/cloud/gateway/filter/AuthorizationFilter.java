@@ -13,10 +13,11 @@ import reactor.core.publisher.Mono;
 /**
  * 全局过滤器
  */
-//@Component
+@Component
 public class AuthorizationFilter implements GlobalFilter, Ordered {
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
+        System.out.println("进入全局过滤器");
         ServerHttpRequest request = exchange.getRequest();
         String username = request.getQueryParams().getFirst("username");
         if (!StringUtils.hasText(username)) {

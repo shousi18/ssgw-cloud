@@ -14,6 +14,7 @@
         <module>ssgw-cloud-model</module>
         <module>ssgw-feign-api</module>
         <module>ssgw-cloud-gateway</module>
+        <module>ssgw-cloud-sba</module>
     </modules>
 
     <!-- 定义属性 -->

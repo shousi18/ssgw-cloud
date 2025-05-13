@@ -28,14 +28,14 @@ spring:
             data-type: json
             rule-type: flow
     # 集成nacos的负载均衡算法，默认：随机
-#    loadbalancer:
-#      nacos:
-#        enabled: true
+    #    loadbalancer:
+    #      nacos:
+    #        enabled: true
     # openfeign日志级别配置
     openfeign:
       client:
         config:
-#          ssgw-cloud-user: 针对于某个服务的配置
+          #          ssgw-cloud-user: 针对于某个服务的配置
           default: # 针对于所有服务
             logger-level: full
             connect-timeout: 5000
@@ -56,3 +56,14 @@ logging:
 feign:
   sentinel:
     enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" # 开启所有需要监控的指标端点，微服务的一些信息就可以被监控服务获取。
+  endpoint:
+    health:
+      show-details: always
+    logfile:
+      external-file: D://logs/ssgw-cloud-order//info.log

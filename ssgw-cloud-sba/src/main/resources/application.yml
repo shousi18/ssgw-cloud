@@ -1,0 +1,34 @@
+server:
+  port: 20100
+
+spring:
+  application:
+    name: ssgw-cloud-sba
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+#  mail:
+#    host: smtp.qq.com
+#    port: 465
+#    username: 1416239139@qq.com
+#    password: ozeyilczvrdzhfff
+#    properties:
+#      mail:
+#        smtp:
+#          auth: true
+#          starttls: # 使用 SSL 安全协议，须如下配置
+#            enable: true
+#            required: true
+#    protocol: smtps   # 465端口使用的通讯协议为smtps
+#  boot:
+#    admin:
+#      notify:
+#        mail:
+#          to: 1416239139@qq.com
+#          from: 1416239139@qq.com
+#          enabled: true
+#        filter:
+#          health-status: DOWN       # 邮件通知策略，当微服务下线的时候发送通知邮件
+#      monitor:
+#        default-timeout: 5000
